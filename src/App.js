@@ -1,23 +1,23 @@
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
+import Todos from './components/Todos'
 import axios from 'axios'
 import './App.css';
 
 function App() {
-
-  const [todos, setTodos] = useState(null)
-
+  const [todos, setTodos] = useState([])
+  
   useEffect( async () => {
     const getTodos = async () => {
       const res = await axios.get("http://localhost:5001");
       setTodos(res.data);
-    }
+    };
 
-    getTodos()
+    getTodos();
   }, []);
 
   return (
     <div className="App">
-      <h1>This is todo app.</h1>
+      <Todos todos={todos} />
     </div>
   );
 }
