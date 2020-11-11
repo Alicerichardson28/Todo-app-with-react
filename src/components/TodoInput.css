@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@300&display=swap');
+
 .input {
     width: 100%;
     border: none;
@@ -13,14 +15,14 @@
 }
 
 .submitBtn {
-    color:  #f4f4f4;
     background-color: #f5b461;
     padding: .5rem 1rem;
     border: none;
     transition: background .5s ease;
+    font-family: 'Big Shoulders Inline Text', cursive;
 }
 
 .submitBtn:hover {
     cursor: pointer;
-    background: #1f6f8b;
+    background: #99a8b2;
 }
