@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@300&display=swap');
+
+.todoItem {
+    margin: 2rem 0;
+    font-family: 'Big Shoulders Inline Text', cursive;
+}
+
+.todoItem h1 {
+    background: #f5b461;
+    padding: 1rem;
+    transition: background 0.5s ease;
+}
+
+.todoItem h1:hover{
+    background: #99a8b2;
+}
+.todoItem:hover {
+    cursor: pointer;
+}
