@@ -1,4 +1,5 @@
 import React, {useRef} from 'react'
+import './TodoInput.css';
 
 function TodoInput({createTodo}) {
     const todoInput = useRef('')
@@ -7,12 +8,11 @@ function TodoInput({createTodo}) {
         e.preventDefault();
 
         createTodo(todoInput.current.value)
-        // e.target.value = '';
         todoInput.current.value = '';
     }
     return (
         <form onSubmit={handleSubmit}>
-            <input type="text" ref={todoInput} required />
+            <input type="text" ref={todoInput} required className="input" />
             <input type="submit"></input>
         </form>
     )
