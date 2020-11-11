@@ -13,7 +13,7 @@ function TodoInput({createTodo}) {
     return (
         <form onSubmit={handleSubmit}>
             <input type="text" ref={todoInput} required className="input" />
-            <input type="submit"></input>
+            <input type="submit" className="submitBtn"/>
         </form>
     )
 }
