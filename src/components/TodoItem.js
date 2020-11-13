@@ -32,9 +32,12 @@ function TodoItem ({ todo, deleteHandler, updateHandler }) {
                     /> 
                 </form>
                 : 
-                <p onDoubleClick={() => setIsEditing(true)}><h1>{todo.message}</h1></p>
+                <p onDoubleClick={() => setIsEditing(true)}>
+                    <h1>{todo.message}
+                    <button className='deletebtn' onClick={() => deleteHandler(todo.id)}>X</button>
+                    </h1>
+                </p>
             }
-            <button onClick={() => deleteHandler(todo.id)}>X</button>
         </div>
     )
 }

@@ -17,3 +17,7 @@
 .todoItem:hover {
     cursor: pointer;
 }
+
+.deletebtn {
+    margin-left: 60em;
+}
