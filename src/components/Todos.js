@@ -2,8 +2,8 @@ import React from 'react'
 import TodoItem from './TodoItem'
 
 
-const Todos = ({ todos }) => {
-return todos.map((todo) => <TodoItem key={todo.id} todo={todo} /> )
+const Todos = ({ todos, deleteHandler }) => {
+return todos.map((todo) => <TodoItem key={todo.id} todo={todo} deleteHandler={deleteHandler}/> )
 }
 
 export default Todos;
