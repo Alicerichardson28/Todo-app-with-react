@@ -23,7 +23,17 @@ function TodoItem ({ todo, deleteHandler, updateHandler }) {
 
     return(
         <div className="todoItem">
-            <h1>{todo.message}</h1>
+            {isEditing ? 
+                <form onSubmit={e => updateAndReset(updatedTodo, e)}>
+                    <input 
+                        type="text"
+                        defaultValue={todo.message}
+                        onChange={updateTodoState}
+                    /> 
+                </form>
+                : 
+                <p onDoubleClick={() => setIsEditing(true)}><h1>{todo.message}</h1></p>
+            }
             <button onClick={() => deleteHandler(todo.id)}>X</button>
         </div>
     )
