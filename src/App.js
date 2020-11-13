@@ -23,12 +23,20 @@ function App() {
     setTodos(res.data)
   }
 
+  const deleteHandler = id => {
+    //filter method 
+    const newTodos = todos.filter(item => {
+      return item.id !== id
+    })
+    setTodos(newTodos)
+  }
+
   return (
     <div className="App">
       <div className="container">
       <Header />
-      <TodoInput createTodo={createTodo}/>
-      {todos ? <Todos todos={todos} /> : <Preloader />}
+      <TodoInput createTodo={createTodo} />
+      {todos ? <Todos todos={todos} deleteHandler={deleteHandler} /> : <Preloader />}
       </div>
     </div>
   );
