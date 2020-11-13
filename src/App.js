@@ -32,8 +32,18 @@ function App() {
     setTodos(newTodos)
   }
 
-  const updateHandler = () => {
+  const updateHandler = todo => {
     //update todo
+    setTodos(todos.map(item => {
+      if(item.id === todo.id) {
+        return {
+          ...item,
+          message: todo.message
+        }
+      } else {
+        return item
+      }
+    }))
   }
 
   return (
